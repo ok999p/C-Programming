@@ -1,0 +1,1 @@
+        gets(publishing.id);

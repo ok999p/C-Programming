@@ -77,4 +77,3 @@ int main(){
     display(give);
     displaydiv7(give2);
 }
-
