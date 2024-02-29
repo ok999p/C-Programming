@@ -34,6 +34,13 @@ void display(){
     }
 }
 
+void peek() {
+    if(head == NULL){
+        printf("This stack is empty\n");
+    }else
+    printf("%d",head -> data);
+}
+
 
 int main() {
     int number,ans,count,time;
@@ -43,7 +50,7 @@ int main() {
     scanf("%d",&count);
     do{
         printf("\n>>>>>>>>>>>LIST<<<<<<<<<<<\n");
-        printf("1. Add number in stact\n2. Del number in stack\n3. Display stack\n4. Enter 4 to stop program");
+        printf("1. Add number in stact\n2. Del number in stack\n3. Display stack\n4.Peek Number \n5. Enter 5 to stop program");
         printf("\n>>>>>>>>>>>LIST<<<<<<<<<<<\n\n");
         printf("Enter your choise : ");
         scanf("%d",&ans);
@@ -65,6 +72,9 @@ int main() {
             display();
             break;
         case 4:
+            peek();
+            break;
+        case 5:
             printf("Exit program");
             break;
         default: printf("Plese Enter 1-4");
