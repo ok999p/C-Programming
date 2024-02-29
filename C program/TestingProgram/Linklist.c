@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct Anumber *number;
 struct Anumber
 {
@@ -12,8 +15,6 @@ struct Div7number
     Divnumber next;
 };
 
-#include <stdio.h>
-#include <stdlib.h>
 
 number createlist(number link){
     number newnode;
@@ -68,12 +69,13 @@ void displaydiv7(Divnumber link){
 }
 
 int main(){
-    number give;
-    Divnumber give2;
-    give = NULL;
-    give2 = NULL;
+    printf("Test1\n");
+    number give = NULL;
+    printf("Test2\n");
+    // Divnumber give2;
+    // give2 = NULL;
     give = createlist(give);
-    give2 = createdivlist(give2,give);
+    // give2 = createdivlist(give2,give);
     display(give);
-    displaydiv7(give2);
+    // displaydiv7(give2);
 }

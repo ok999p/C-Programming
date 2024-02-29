@@ -1,1 +1,2 @@
-        gets(publishing.id);
+
+    displaypersondata(n, person);
