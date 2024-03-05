@@ -43,7 +43,7 @@ void peek() {
 
 
 int main() {
-    int number,ans,count,time;
+    int number,ans,count,time = 0;
     char ch[1];
     head = NULL;
     printf("How many times do you want to stacked : ");
