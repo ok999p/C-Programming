@@ -59,7 +59,7 @@ void create_node() {
         success = true;
     } else {
         temp = HEAD;
-        while(temp != NULL){
+        while(temp->LINK != NULL){
             temp = temp->LINK;
         }
         temp->LINK = NEW;
@@ -88,14 +88,14 @@ void delete_node(){
     struct node *ptemp;
     bool success = false;
 
-    printf("\n ----------Deletion ----------");
+    printf("\n ----------Deletion ----------\n");
     printf("Enter data to delete: ");
     scanf("%d",&data);
 
 
     // Find the node to delete
     temp = HEAD;
-    ptemp = temp;
+    ptemp = NULL    ;
     while (temp != NULL){
         if(temp->DATA != data){
             ptemp = temp;
@@ -106,13 +106,17 @@ void delete_node(){
         }
     }
     
-    if (temp->LINK == NULL){
-        ptemp = NULL;
-        success = true;
-        free(temp);
-    } else {
-        ptemp->LINK = temp->LINK;
-        success = true;
-        free(temp);
-    }
+if (temp == NULL) {
+    printf("Node with data %d not found\n", data);
+    return;
+}
+
+if (ptemp == NULL) {
+    HEAD = temp->LINK;
+} else {
+    ptemp->LINK = temp->LINK;
+}
+
+free(temp);
+success = true;
 }
