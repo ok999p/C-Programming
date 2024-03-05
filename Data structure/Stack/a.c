@@ -53,6 +53,7 @@ int main() {
     unsigned capacity = n;
     while(1) {
         printf("4");
+        scanf("%d", &a);
         switch (a)
         {
         case 1:
@@ -60,6 +61,7 @@ int main() {
             break;
         case 2:
             peek();
+            break;
         default:
             break;
         }
