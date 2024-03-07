@@ -6,6 +6,7 @@
 void create_node();
 void traverse();
 void delete_node();
+void insert();
 
 struct node{
     int DATA;
@@ -22,7 +23,7 @@ int main(){
         printf("******************");
         printf("Singly Linked List: ");
         printf("******************\n");
-        printf("1.Creating node\n2.Traversing the list\n3.Deleteing node");
+        printf("1.Creating node\n2.Traversing the list\n3.Deleteing node\n4.Insert node");
         printf("\n**********************************************\n");
         printf("Enter your choice: ");
         scanf("%d",&ans);
@@ -35,6 +36,9 @@ int main(){
             break;
             case 3:
             delete_node();
+            break;
+            case 4:
+            insert();
             break;
             default: printf("\nEnter correct choice");
         }
@@ -119,4 +123,29 @@ if (ptemp == NULL) {
 
 free(temp);
 success = true;
+}
+
+void insert() {
+    int data;
+    struct node *ptemp;
+    temp = HEAD;
+    ptemp = temp;
+    NEW = malloc(sizeof(struct node));
+    printf("Num insert : ");
+    scanf("%d",&NEW -> DATA);
+    printf("Before : ");
+    scanf("%d",&data);
+    while (temp != NULL){
+        if(temp -> LINK == NULL){
+            printf("Data maime");
+            free(NEW);
+        }else
+        temp = temp ->LINK;
+        if(temp == HEAD){
+            NEW -> LINK = temp;
+            HEAD = NEW;
+        }else 
+        ptemp -> LINK = NEW;
+        NEW -> LINK = temp;
+    }
 }
