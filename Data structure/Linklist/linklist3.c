@@ -6,7 +6,7 @@
 void create_node();
 void traverse();
 void delete_node();
-void insert();
+void insert(); 
 
 struct node{
     int DATA;
