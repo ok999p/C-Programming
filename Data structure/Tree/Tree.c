@@ -51,4 +51,3 @@ struct tree* insert(struct tree *node , int data) {
     return node;
 }
 
-
