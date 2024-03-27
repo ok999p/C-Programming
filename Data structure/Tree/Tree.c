@@ -22,15 +22,13 @@ int main(){
     insert(root_node , 25);
     insert(root_node , 36);
     insert(root_node , 56);
-    insert(root_node , 78);
+    insert(root_node , 78);     
+    print(root_node);
     delete(root_node , 58);
     print(root_node);
 }
 
 void print(struct tree *root_node) {
-    if(root_node == NULL){
-        printf("Tree is emtpy");
-    }
     if(root_node != NULL){
         print(root_node -> left);
         printf("%d\n",root_node -> info);
